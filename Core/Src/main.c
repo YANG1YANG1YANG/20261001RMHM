@@ -86,8 +86,8 @@ void UpdateLed(uint32_t now) {
     if (now-last>=10) {
       last=now;
       pulse+=duty_direction;
-      if (pulse>=1000 && duty_direction==10) {
-        pulse = 1000;
+      if (pulse>=10000 && duty_direction==10) {
+        pulse = 10000;
         duty_direction = -10;
       }
       else if (pulse<=0 && duty_direction==-10) {
